@@ -8,6 +8,10 @@ const connectDB = require("./config/db");
 connectDB();
 app.get("/", (req, res) => res.send("Hello World"));
 
+//Init Middleware
+
+app.use(express.json({ extended: false }));
+
 //Define Routes
 
 app.use("/api/users", require("./routes/users"));
