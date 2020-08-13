@@ -42,8 +42,8 @@ const ContactState = (props) => {
 
   //Add contact
   const addContact = (contact) => {
-    // contact.id = uuid;
-    Math.random();
+    contact.id = uuid;
+
     dispatch({ type: ADD_CONTACT, payload: contact });
   };
 
@@ -59,7 +59,7 @@ const ContactState = (props) => {
 
   //Clear current contact
   const clearCurrent = () => {
-    dispatch({ type: CLEAR_FILTER });
+    dispatch({ type: CLEAR_CURRENT });
   };
   //Update contact
   const updateContact = (contact) => {
