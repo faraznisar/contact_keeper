@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://faraz:faraz_def@cluster0.jtfe9.mongodb.net/dev?retryWrites=true&w=majority",
+  "jwtSecret": "secretj"
+}
