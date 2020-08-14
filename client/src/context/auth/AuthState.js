@@ -73,14 +73,10 @@ const AuthState = (props) => {
         "Content-Type": "application/json",
       },
     };
-
     try {
       const res = await axios.post("/api/auth", formData, config);
 
-      dispatch({
-        type: LOGIN_SUCCESS,
-        payload: res.data,
-      });
+      dispatch({ type: LOGIN_SUCCESS, payload: res.data });
 
       loadUser();
     } catch (err) {
@@ -105,9 +101,9 @@ const AuthState = (props) => {
         loading: state.loading,
         user: state.user,
         error: state.error,
+        login,
         register,
         loadUser,
-        login,
         logout,
         clearErrors,
       }}
